@@ -14,3 +14,5 @@ jobs:
         id: lizard
       - name: Get the output time
         run: echo -e "${{ steps.lizard.outputs.result_cli }}"
+      - name: Get the output time
+        run: ls

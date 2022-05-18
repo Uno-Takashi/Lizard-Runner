@@ -1,7 +1,7 @@
 #!/bin/bash
 set -eax
 result_cli="test"
-result_cli=`lizard $2`
+result_cli=`lizard $2 | tee lizard.txt`
 result_cli="${result_cli//$'\n'/\\n}"
 
 echo "::group::Outputs"
