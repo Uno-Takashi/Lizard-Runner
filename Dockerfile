@@ -12,3 +12,5 @@ ENV DEBCONF_NOWARNINGS yes
 RUN pip install poetry
 ADD pyproject.toml /usr/src/app
 RUN poetry install --no-root
+
+ENTRYPOINT ["/entrypoint.sh"]
