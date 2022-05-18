@@ -1,0 +1,27 @@
+name: "Lizard Runner"
+description: "GitHub action to lint your python code with bandit"
+branding:
+  icon: "wind"
+  color: "yellow"
+inputs:
+  path:
+    description: "File or directory to run bandit on"
+    required: false
+    default: "."
+  language:
+    description: "List the programming languages you
+      want to analyze. if left empty, it'll search
+      for all languages it knows.
+      `lizard -l cpp -l java`searches for C++ and Java
+      code. The available languages are: cpp, java,
+      csharp,javascript, python, objectivec, ttcn,
+      ruby, php, swift, scala, GDScript,go,
+      lua, rust, typescript"
+    required: false
+    default: "python"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.path }}
+    - ${{ inputs.language }}
