@@ -5,5 +5,6 @@ ADD pyproject.toml /pyproject.toml
 RUN pip install lizard
 
 ADD entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
