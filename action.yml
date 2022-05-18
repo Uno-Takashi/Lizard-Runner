@@ -16,6 +16,10 @@ inputs:
     description: ""
     required: false
     default: ""
+outputs:
+  result_cli:
+    description: ""
+
 runs:
   using: "docker"
   image: "Dockerfile"
