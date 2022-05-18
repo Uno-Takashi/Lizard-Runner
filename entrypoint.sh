@@ -1,4 +1,4 @@
 #!/bin/sh
 set -eax
 
-poetry run lizard $2
+lizard $2
