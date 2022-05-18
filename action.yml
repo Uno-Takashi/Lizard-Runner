@@ -12,6 +12,10 @@ inputs:
     description: ""
     required: false
     default: ""
+  save_cli:
+    description: ""
+    required: false
+    default: ""
 runs:
   using: "docker"
   image: "Dockerfile"
