@@ -12,3 +12,5 @@ jobs:
       - name: test-action
         uses: ./ # Uses an action in the root directory
         id: lizard
+      - name: Get the output time
+        run: echo "The time was ${{ steps.lizard.outputs.result_cli }}"
