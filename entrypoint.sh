@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 set -eax
 result_cli="test"
 result_cli=`lizard $2`
