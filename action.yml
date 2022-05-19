@@ -13,9 +13,18 @@ inputs:
     required: false
     default: "./lizard_cli.txt"
   language:
-    description: "language"
+    description: >
+      List the programming languages you want to analyze. if left empty, it'll
+      search for all languages it knows. `lizard -l cpp -l java`searches for
+      C++ and Java code. The available languages are: cpp, java, csharp,
+      javascript, python, objectivec, ttcn, ruby, php, swift, scala, GDScript,
+      go, lua, rust, typescript
     required: false
     default: "python"
+  verbose:
+    description: "Output in verbose mode (long function name)"
+    required: false
+    default: "false"
   CCN:
     description: >
       Threshold for cyclomatic complexity number warning. 
@@ -133,6 +142,7 @@ runs:
     - ${{ inputs.path }}
     - ${{ inputs.cli_output_file }}
     - ${{ inputs.language }}
+    - ${{ inputs.verbose }}
     - ${{ inputs.CCN }}
     - ${{ inputs.input_file }}
     - ${{ inputs.output_file }}
