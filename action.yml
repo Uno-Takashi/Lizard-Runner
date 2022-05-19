@@ -1,5 +1,5 @@
 name: "Lizard Runner"
-description: "GitHub action to lint your python code with bandit"
+description: "GitHub action to lint your python code with lizard"
 branding:
   icon: "wind"
   color: "yellow"
@@ -7,7 +7,7 @@ inputs:
   path:
     description: "File or directory to run lizard on"
     required: false
-    default: "./"
+    default: "../"
   cli_output:
     description: "lizard cli"
     required: false
