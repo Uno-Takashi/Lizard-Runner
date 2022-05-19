@@ -1,6 +1,9 @@
 #!/bin/bash
 set -eax
 
+base_dir=`pwd`
+echo &base_dir
+
 cd $1
 
 result_cli="test"
