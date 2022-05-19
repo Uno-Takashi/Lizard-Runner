@@ -5,14 +5,35 @@ branding:
   color: "yellow"
 inputs:
   path:
-    description: "File or directory to run bandit on"
+    description: "File or directory to run lizard on"
     required: false
     default: "./"
-  lizard_options:
+  cli_output:
     description: ""
     required: false
+    default: "lizard_cli.txt"
+  language:
+    description: >
+      List the programming languages you want to analyze. 
+      if left empty, it'll search for all languages it knows. 
+      `lizard -l cpp -l java`searches for C++ and Java code. 
+      The available languages are:
+      cpp, java, csharp, javascript, python, objectivec, ttcn, ruby, 
+      php, swift, scala, GDScript, go, lua, rust, typescript
+    required: false
+    default: "python"
+  ccn:
+    description: >
+      Threshold for cyclomatic complexity number warning. 
+      The default value is 15.
+      Functions with CCN bigger than it will generate warning
+    required: false
+    default: "15"
+  input_file:
+    description: "get a list of filenames from the given file"
+    required: false
     default: ""
-  save_cli:
+  lizard_options:
     description: ""
     required: false
     default: ""
