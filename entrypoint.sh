@@ -1,5 +1,8 @@
 #!/bin/bash
 set -eax
+
+cd $1
+
 result_cli="test"
 result_cli=`lizard $2 | tee lizard.txt`
 result_cli="${result_cli//$'\n'/\\n}"
