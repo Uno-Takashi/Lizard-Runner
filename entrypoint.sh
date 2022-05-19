@@ -13,17 +13,17 @@ output_file=$6
 length=$7
 arguments=$8
 warnings_only=$9
-warning_msvs=$10
-ignore_warnings=$11
-exclude=$12
-working_threads=$13
-xml=$14
-html=$15
-modified=$16
-extension=$17
-sort=$15
-Threshold=$16
-whitelist=$17
+warning_msvs=${10}
+ignore_warnings=${11}
+exclude=${12}
+working_threads=${13}
+xml=${14}
+html=${15}
+modified=${16}
+extension=${17}
+sort=${18}
+Threshold=${19}
+whitelist=${20}
 
 echo $whitelist
 
