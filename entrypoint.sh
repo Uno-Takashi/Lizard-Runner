@@ -3,27 +3,27 @@ set -eax
 
 base_dir=`pwd`
 
-path=$0
-cli_output_file=$1
-language=$2
-verbose=$3
-CCN=$4
-input_file=$5
-output_file=$6
-length=$7
-arguments=$8
-warnings_only=$9
-warning_msvs=${10}
-ignore_warnings=${11}
-exclude=${12}
-working_threads=${13}
-xml=${14}
-html=${15}
-modified=${16}
-extension=${17}
-sort=${18}
-Threshold=${19}
-whitelist=${20}
+path=$1
+cli_output_file=$2
+language=$3
+verbose=$4
+CCN=$5
+input_file=$6
+output_file=$7
+length=$8
+arguments=$9
+warnings_only=${10}
+warning_msvs=${11}
+ignore_warnings=${12}
+exclude=${13}
+working_threads=${14}
+xml=${15}
+html=${16}
+modified=${17}
+extension=${18}
+sort=${19}
+Threshold=${20}
+whitelist=${21}
 
 echo $whitelist
 
