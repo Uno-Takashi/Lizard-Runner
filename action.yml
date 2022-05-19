@@ -9,17 +9,11 @@ inputs:
     required: false
     default: "./"
   cli_output:
-    description: ""
+    description: "lizard cli"
     required: false
     default: "./lizard_cli.txt"
   language:
-    description: >
-      List the programming languages you want to analyze. 
-      if left empty, it'll search for all languages it knows. 
-      `lizard -l cpp -l java`searches for C++ and Java code. 
-      The available languages are:
-      cpp, java, csharp, javascript, python, objectivec, ttcn, ruby, 
-      php, swift, scala, GDScript, go, lua, rust, typescript
+    description: "language"
     required: false
     default: "python"
   CCN:
