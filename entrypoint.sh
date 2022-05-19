@@ -25,7 +25,7 @@ sort=${19}
 Threshold=${20}
 whitelist=${21}
 
-echo $whitelist
+echo `$whitelist`
 
 result_cli="test"
 result_cli=`lizard | tee $cli_output_file`
