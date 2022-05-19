@@ -3,6 +3,8 @@ set -eax
 
 base_dir=`pwd`
 echo $base_dir
+echo $3
+echo $4
 
 cd $1
 
