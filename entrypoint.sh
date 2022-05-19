@@ -2,7 +2,7 @@
 set -eax
 
 base_dir=`pwd`
-echo &base_dir
+echo $base_dir
 
 cd $1
 
