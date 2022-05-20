@@ -49,8 +49,15 @@ print(args)
 
 lizard_args: list = []
 
-lizard_args.extend(["-language", args.language])
+lizard_args.extend(["--language", args.language])
+
 if args.verbose.lower() == "true":
-    lizard_args.append("-verbose")
+    lizard_args.append("--verbose")
+
+lizard_args.extend(["--CCN", args.CCN])
+
+if args.input_file != "None":
+    input_file_path = Path(args.input_file)
+    lizard_args.extend(["--input_file", str(input_file_path)])
 
 print(" ".join(lizard_args))
