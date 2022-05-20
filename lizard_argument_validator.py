@@ -2,29 +2,7 @@ import argparse
 from pathlib import Path
 
 parser = argparse.ArgumentParser(description="Validate the argument of lizard")
-parser.add_argument(
-    "-language",
-    choices=[
-        "cpp",
-        "java",
-        "csharp",
-        "javascript",
-        "python",
-        "objectivec",
-        "ttcn",
-        "ruby",
-        "php",
-        "swift",
-        "scala",
-        "GDScript",
-        "go",
-        "lua",
-        "rust",
-        "typescript",
-        "None",
-    ],
-    type=str,
-)
+parser.add_argument("-language", type=str)
 parser.add_argument("-verbose", choices=["true", "false"], type=str)
 parser.add_argument("-CCN", type=int)
 parser.add_argument("-input_file", type=str)
@@ -47,12 +25,27 @@ parser.add_argument("-whitelist", type=Path)
 args = parser.parse_args()
 
 
-def add_double_quotes(x):
-    x = str(x)
-    return '"' + x + '"'
-
-
 lizard_args: list = []
+
+language_list: list = [
+    "cpp",
+    "java",
+    "csharp",
+    "javascript",
+    "python",
+    "objectivec",
+    "ttcn",
+    "ruby",
+    "php",
+    "swift",
+    "scala",
+    "GDScript",
+    "go",
+    "lua",
+    "rust",
+    "typescript",
+    "None",
+]
 
 if args.language != "None":
     lizard_args.extend(["--language", args.language])
@@ -64,11 +57,11 @@ lizard_args.extend(["--CCN", args.CCN])
 
 if args.input_file != "None":
     input_file_path = Path(args.input_file)
-    lizard_args.extend(["--input_file", add_double_quotes(input_file_path)])
+    lizard_args.extend(["--input_file", input_file_path])
 
 if args.output_file != "None":
     output_file_path = Path(args.output_file)
-    lizard_args.extend(["--output_file", add_double_quotes(output_file_path)])
+    lizard_args.extend(["--output_file", output_file_path])
 
 lizard_args.extend(["--length", args.length])
 
@@ -83,10 +76,10 @@ if args.warning_msvs.lower() == "true":
     lizard_args.append("--warning_msvs")
 
 if args.ignore_warnings != "None":
-    lizard_args.extend(["--ignore_warnings", add_double_quotes(args.ignore_warnings)])
+    lizard_args.extend(["--ignore_warnings", args.ignore_warnings])
 
 if args.exclude != "None":
-    lizard_args.extend(["--exclude", add_double_quotes(args.exclude)])
+    lizard_args.extend(["--exclude", args.exclude])
 
 lizard_args.extend(["--working_threads", args.working_threads])
 
@@ -97,16 +90,16 @@ if args.html.lower() == "true":
     lizard_args.append("--html")
 
 if args.extension != "None":
-    lizard_args.extend(["--extension", add_double_quotes(args.extension)])
+    lizard_args.extend(["--extension", args.extension])
 
 if args.sort != "None":
-    lizard_args.extend(["--sort", add_double_quotes(args.sort)])
+    lizard_args.extend(["--sort", args.sort])
 
 if args.Threshold != "None":
-    lizard_args.extend(["--Threshold", add_double_quotes(args.Threshold)])
+    lizard_args.extend(["--Threshold", args.Threshold])
 
 if args.whitelist != "None":
     whitelist_path = Path(args.whitelist)
-    lizard_args.extend(["--whitelist", add_double_quotes(whitelist_path)])
+    lizard_args.extend(["--whitelist", whitelist_path])
 
 print(" ".join(map(str, lizard_args)))
