@@ -25,11 +25,12 @@ sort=${19}
 Threshold=${20}
 whitelist=${21}
 
-echo `$whitelist`
+if [ -z "$input_file" ]; then
+  echo "hi"
+fi
 
-result_cli="test"
 result_cli=`lizard | tee $cli_output_file`
 result_cli="${result_cli//$'\n'/\\n}"
 
 echo "::group::Outputs"
-echo ::set-output name=result_cli::$result_cli
+echo ::set-output name=result_output_path::$cli_output_file
