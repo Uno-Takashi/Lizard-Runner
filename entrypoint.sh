@@ -51,10 +51,12 @@ if [ -z "$Threshold" ]; then
 fi
 whitelist=${21}
 
+python /lib/lizard_argument_validator.py
+
 result_cli=`lizard | tee $cli_output_file`
 result_cli="${result_cli//$'\n'/\\n}"
 
-python /src/lizard_argument_validator.py
+
 
 echo "::group::Outputs"
 echo ::set-output name=result_output_path::$cli_output_file
