@@ -51,7 +51,26 @@ if [ -z "$Threshold" ]; then
 fi
 whitelist=${21}
 
-python /lib/lizard_argument_validator.py -language $language
+python /lib/lizard_argument_validator.py \
+                    -language $language \
+                    -verbose $verbose \
+                    -CCN $CCN \
+                    -input_file $input_file \
+                    -output_file $output_file \
+                    -length $length \
+                    -arguments $arguments \
+                    -warnings_only $warnings_only \
+                    -warning_msvs $warning_msvs \
+                    -ignore_warnings $ignore_warnings \
+                    -exclude $exclude \
+                    -working_threads $working_threads \
+                    -xml $xml \
+                    -html $html \
+                    -modified $modified \
+                    -extension $extension \
+                    -sort $sort \
+                    -Threshold $Threshold \
+                    -whitelist $whitelist
 
 result_cli=`lizard | tee $cli_output_file`
 result_cli="${result_cli//$'\n'/\\n}"
