@@ -46,8 +46,6 @@ parser.add_argument("-whitelist", type=Path)
 
 args = parser.parse_args()
 
-print(args)
-
 
 def add_double_quotes(x):
     x = str(x)
