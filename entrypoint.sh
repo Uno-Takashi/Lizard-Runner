@@ -77,7 +77,7 @@ lizard_args=`python /lib/lizard_argument_validator.py \
                     `
 echo "::group::RunLizard"
 
-result_cli=`lizard $lizard_args | tee $cli_output_file`
+lizard $lizard_args | tee $cli_output_file
 
 echo "::group::Outputs"
 echo ::set-output name=result_output_path::$cli_output_file
