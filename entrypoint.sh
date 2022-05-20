@@ -1,6 +1,8 @@
 #!/bin/bash
 set -eax
 
+echo "::group::SetArguments"
+
 base_dir=`pwd`
 
 path=$1
