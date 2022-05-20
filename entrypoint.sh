@@ -1,11 +1,14 @@
 #!/bin/bash
 set -eax
 
-echo "::group::ValidateArguments"
-
+echo "::group::ChangeDirectory"
 base_dir=`pwd`
 
-path=$1
+execute_path=$1
+cd $execute_path
+
+echo "::group::ValidateArguments"
+
 cli_output_file=$2
 language=$3
 verbose=$4
