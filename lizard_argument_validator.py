@@ -1,8 +1,5 @@
 import argparse
 from pathlib import Path
-from tabnanny import verbose
-
-from torch import true_divide
 
 parser = argparse.ArgumentParser(description="Validate the argument of lizard")
 parser.add_argument(

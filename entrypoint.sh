@@ -1,7 +1,7 @@
 #!/bin/bash
 set -eax
 
-echo "::group::SetArguments"
+echo "::group::ValidateArguments"
 
 base_dir=`pwd`
 
