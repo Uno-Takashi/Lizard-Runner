@@ -21,6 +21,7 @@ parser.add_argument(
         "lua",
         "rust",
         "typescript",
+        "None",
     ],
     type=str,
 )
@@ -55,7 +56,8 @@ def add_double_quotes(x):
 
 lizard_args: list = []
 
-lizard_args.extend(["--language", args.language])
+if args.language != "None":
+    lizard_args.extend(["--language", args.language])
 
 if args.verbose.lower() == "true":
     lizard_args.append("--verbose")

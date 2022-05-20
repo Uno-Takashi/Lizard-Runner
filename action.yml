@@ -20,7 +20,7 @@ inputs:
       javascript, python, objectivec, ttcn, ruby, php, swift, scala, GDScript,
       go, lua, rust, typescript
     required: false
-    default: "python"
+    default: "None"
   verbose:
     description: "Output in verbose mode (long function name)"
     required: false
