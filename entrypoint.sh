@@ -72,6 +72,8 @@ python /lib/lizard_argument_validator.py \
                     -Threshold $Threshold \
                     -whitelist $whitelist
 
+echo "::group::RunLizard"
+
 result_cli=`lizard | tee $cli_output_file`
 result_cli="${result_cli//$'\n'/\\n}"
 

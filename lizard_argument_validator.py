@@ -58,6 +58,6 @@ lizard_args.extend(["--CCN", args.CCN])
 
 if args.input_file != "None":
     input_file_path = Path(args.input_file)
-    lizard_args.extend(["--input_file", str(input_file_path)])
+    lizard_args.extend(["--input_file", input_file_path])
 
-print(" ".join(lizard_args))
+print(" ".join(map(str, lizard_args)))
