@@ -60,4 +60,47 @@ if args.input_file != "None":
     input_file_path = Path(args.input_file)
     lizard_args.extend(["--input_file", input_file_path])
 
+if args.output_file != "None":
+    output_file_path = Path(args.output_file)
+    lizard_args.extend(["--output_file", output_file_path])
+
+lizard_args.extend(["--length", args.length])
+
+if args.arguments != "None":
+    arguments_int: int = int(args.arguments)
+    lizard_args.extend(["--arguments", arguments_int])
+
+if args.warnings_only.lower() == "true":
+    lizard_args.append("--warnings_only")
+
+if args.warning_msvs.lower() == "true":
+    lizard_args.append("--warning_msvs")
+
+if args.ignore_warnings != "None":
+    lizard_args.extend(["--ignore_warnings", args.ignore_warnings])
+
+if args.exclude != "None":
+    lizard_args.extend(["--exclude", args.exclude])
+
+lizard_args.extend(["--working_threads", args.working_threads])
+
+if args.xml.lower() == "true":
+    lizard_args.append("--xml")
+
+if args.html.lower() == "true":
+    lizard_args.append("--html")
+
+if args.extension != "None":
+    lizard_args.extend(["--extension", args.extension])
+
+if args.sort != "None":
+    lizard_args.extend(["--sort", args.sort])
+
+if args.Threshold != "None":
+    lizard_args.extend(["--Threshold", args.Threshold])
+
+if args.whitelist != "None":
+    whitelist_path = Path(args.whitelist)
+    lizard_args.extend(["--whitelist", whitelist_path])
+
 print(" ".join(map(str, lizard_args)))
