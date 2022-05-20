@@ -1,5 +1,8 @@
 import argparse
 from pathlib import Path
+from tabnanny import verbose
+
+from torch import true_divide
 
 parser = argparse.ArgumentParser(description="Validate the argument of lizard")
 parser.add_argument(
@@ -46,3 +49,11 @@ parser.add_argument("-whitelist", type=Path)
 args = parser.parse_args()
 
 print(args)
+
+lizard_args: list = []
+
+lizard_args.extend(["-language", args.language])
+if args.verbose.lower() == "true":
+    lizard_args.append("-verbose")
+
+print(" ".join(lizard_args))
