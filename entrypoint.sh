@@ -54,7 +54,7 @@ if [ -z "$Threshold" ]; then
 fi
 whitelist=${21}
 
-lizard_args=python /lib/lizard_argument_validator.py \
+lizard_args=`python /lib/lizard_argument_validator.py \
                     -language $language \
                     -verbose $verbose \
                     -CCN $CCN \
@@ -74,7 +74,7 @@ lizard_args=python /lib/lizard_argument_validator.py \
                     -sort $sort \
                     -Threshold $Threshold \
                     -whitelist $whitelist
-
+                    `
 echo "::group::RunLizard"
 
 result_cli=`lizard $lizard_args | tee $cli_output_file`
