@@ -4,14 +4,19 @@ set -eax
 echo "::group::ChangeDirectory"
 base_dir=`pwd`
 
-execute_path=$1
-cd $execute_path
+path=$1
+cd $path
 
 echo "::group::ValidateArguments"
 
 cli_output_file=$2
+
 language=$3
+language=`echo $language | sed 's/ //g'`
+
 verbose=$4
+verbose=`echo $verbose | sed 's/ //g'`
+
 CCN=$5
 input_file=$6
 if [ -z "$input_file" ]; then
@@ -77,7 +82,7 @@ lizard_args=`python /lib/lizard_argument_validator.py \
                     `
 echo "::group::RunLizard"
 
-lizard $lizard_args | tee $cli_output_file
+lizard $lizard_args $path | tee $cli_output_file
 
 echo "::group::Outputs"
 echo ::set-output name=result_output_path::$cli_output_file

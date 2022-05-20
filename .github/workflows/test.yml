@@ -12,6 +12,9 @@ jobs:
       - name: test-action
         uses: ./ # Uses an action in the root directory
         id: lizard
+        with:
+          path: "./src"
+          language: "python"
       - name: Get the output time
         run: echo -e "${{ steps.lizard.outputs.result_output_path }}"
       - name: Get the output time
