@@ -33,15 +33,18 @@ inputs:
     required: false
     default: "15"
   input_file:
-    description: "get a list of filenames from the given file"
+    description: >
+      get a list of filenames from the given file
+      If None, this flag is not given. The default is set to None.
     required: false
-    default: ""
+    default: "None"
   output_file:
     description: >
       Output file. The output format is inferred from the file extension (e.g.
       .html), unless it is explicitly specified (e.g. using --xml).
+      If None, this flag is not given. The default is set to None.
     required: false
-    default: ""
+    default: "None"
   length:
     description: >
       Threshold for maximum function length warning. The default value is 1000.
@@ -49,9 +52,11 @@ inputs:
     required: false
     default: "1000"
   arguments:
-    description: "Limit for number of parameters"
+    description: >
+      Limit for number of parameters
+      If None, this flag is not given. The default is set to None.
     required: false
-    default: ""
+    default: "None"
   warnings_only:
     description: >
       Show warnings only, using clang/gcc's warning format for printing
@@ -71,16 +76,18 @@ inputs:
       exit normally; otherwise, it will generate error. If the number is
       negative, the tool exits normally regardless of the number of warnings.
       Useful in makefile for legacy code.
+      If None, this flag is not given. The default is set to None.
     required: false
-    default: ""
+    default: "None"
   exclude:
     description: >
       Exclude files that match the pattern. * matches everything, ? matches any
       single character, "./folder/*" exclude everything in the folder
       recursively. Multiple patterns can be specified. Don't forget to add ""
       around the pattern.
+      If None, this flag is not given. The default is set to None.
     required: false
-    default: ""
+    default: "None"
   working_threads:
     description: >
       number of working threads. The default lizard value is 1. Using a bigger number
@@ -110,21 +117,24 @@ inputs:
       generate tag cloud. -Eoutside: include the global code as one function.
       -EIgnoreAssert: to ignore all code in assert. -ENS: count nested control
       structures.
+      If None, this flag is not given. The default is set to None.
     required: false
-    default: ""
+    default: "None"
   sort:
     description: >
       Sort the warning with field. The field can be nloc,
       cyclomatic_complexity, token_count, parameter_count, etc. Or an customized field.
+      If None, this flag is not given. The default is set to None.
     required: false
-    default: ""
+    default: "None"
   Threshold:
     description: >
       Set the limit for a field. The field can be nloc, cyclomatic_complexity,
       token_count, parameter_count, etc. Or an customized file. Lizard will
       report warning if a function exceed the limit
+      If None, this flag is not given. The default is set to None.
     required: false
-    default: ""
+    default: "None"
   whitelist:
     description: >
       The path and file name to the whitelist file. It's './whitelizard.txt' by
