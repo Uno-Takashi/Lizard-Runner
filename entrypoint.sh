@@ -5,7 +5,6 @@ echo "::group::ChangeDirectory"
 base_dir=`pwd`
 
 path=$1
-cd $path
 
 echo "::group::ValidateArguments"
 
