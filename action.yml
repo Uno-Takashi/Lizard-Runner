@@ -157,6 +157,7 @@ runs:
   args:
     - ${{ inputs.path }}
     - ${{ inputs.cli_output_file }}
+    - ${{ inputs.ci_mode }}
     - ${{ inputs.language }}
     - ${{ inputs.verbose }}
     - ${{ inputs.CCN }}
