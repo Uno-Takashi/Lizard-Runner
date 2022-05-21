@@ -109,4 +109,5 @@ if args.whitelist != "":
 
 options = " ".join(map(str, lizard_args))
 
-subprocess.run(options, shell=True)
+lizard_run = subprocess.run(options, shell=True, stdout=subprocess.PIPE)
+print(lizard_run)
