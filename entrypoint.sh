@@ -15,7 +15,6 @@ cli_output_file=`echo ${db}${cli_output_file}${db}`
 
 
 language=$3
-language=`echo ${db}${language}${db}`
 
 verbose=$4
 verbose=`echo ${db}${verbose}${db}`
@@ -97,7 +96,7 @@ whitelist=`echo ${db}${whitelist}${db}`
 echo $whitelist
 
 lizard_args=$(python /lib/lizard_argument_validator.py \
-                    -language $(echo $language) \
+                    -language $language \
                     -verbose $verbose \
                     -CCN $CCN \
                     -input_file $input_file \
