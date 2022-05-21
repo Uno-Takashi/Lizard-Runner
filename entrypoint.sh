@@ -6,90 +6,93 @@ echo "::group::ChangeDirectory"
 
 
 echo "::group::ValidateArguments"
+
+db='"'
 path=$1
 cli_output_file=$2
-cli_output_file='"$cli_output_file"'
+cli_output_file=`echo ${db}${cli_output_file}${db}`
 
 
 language=$3
-language='"$language"'
+language=`echo ${db}${language}${db}`
 
 verbose=$4
-verbose='"$verbose"'
+verbose=`echo ${db}${verbose}${db}`
 
 CCN=$5
-CCN='"$CCN"'
+CCN=`echo ${db}${CCN}${db}`
 
 input_file=$6
 if [ -z "$input_file" ]; then
   input_file="None"
 fi
-input_file='"$input_file"'
+input_file=`echo ${db}${input_file}${db}`
 
 output_file=$7
 if [ -z "$output_file" ]; then
   output_file="None"
 fi
-output_file='"$output_file"'
+output_file=`echo ${db}${output_file}${db}`
 
 length=$8
-length='"$length"'
+length=`echo ${db}${length}${db}`
 
 arguments=$9
 if [ -z "$arguments" ]; then
   arguments="None"
 fi
-arguments='"$arguments"'
+arguments=`echo ${db}${arguments}${db}`
 
 warnings_only=${10}
-warnings_only='"$warnings_only"'
+warnings_only=`echo ${db}${warnings_only}${db}`
 
 warning_msvs=${11}
-warning_msvs='"$warning_msvs"'
+warning_msvs=`echo ${db}${warning_msvs}${db}`
 
 ignore_warnings=${12}
 if [ -z "$ignore_warnings" ]; then
   ignore_warnings="None"
 fi
-ignore_warnings='"$ignore_warnings"'
+ignore_warnings=`echo ${db}${ignore_warnings}${db}`
 
 exclude=${13}
 if [ -z "$exclude" ]; then
   exclude="None"
 fi
-exclude='"$exclude"'
+exclude=`echo ${db}${exclude}${db}`
 
 working_threads=${14}
-working_threads='"$working_threads"'
+working_threads=`echo ${db}${working_threads}${db}`
 
 xml=${15}
-xml='"$xml"'
+xml=`echo ${db}${xml}${db}`
 
 html=${16}
-html='"$html"'
+html=`echo ${db}${html}${db}`
 
 modified=${17}
-modified='"$modified"'
+modified=`echo ${db}${modified}${db}`
+
 extension=${18}
 if [ -z "$extension" ]; then
   extension="None"
 fi
-extension='"$extension"'
+extension=`echo ${db}${extension}${db}`
 
 sort=${19}
 if [ -z "$sort" ]; then
   sort="None"
 fi
-sort='"$sort"'
+sort=`echo ${db}${sort}${db}`
 
 Threshold=${20}
 if [ -z "$Threshold" ]; then
   Threshold="None"
 fi
-Threshold='"$Threshold"'
+Threshold=`echo ${db}${Threshold}${db}`
 
 whitelist=${21}
-whitelist='"$whitelist"'
+whitelist=`echo ${db}${whitelist}${db}`
 
 lizard_args=`python /lib/lizard_argument_validator.py \
                     -language $language \
