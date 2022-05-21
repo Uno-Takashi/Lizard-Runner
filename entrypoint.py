@@ -7,7 +7,7 @@ print("::group::ValidateArguments")
 
 parser = argparse.ArgumentParser(description="Validate the argument of lizard")
 parser.add_argument("path", type=str)
-parser.add_argument("cli_output_file", type=str)
+parser.add_argument("cli_output_file", type=Path)
 parser.add_argument("language", type=str)
 parser.add_argument("verbose", choices=["true", "false"], type=str)
 parser.add_argument("CCN", type=int)
@@ -139,6 +139,9 @@ result = subprocess.run(
     text=True,
 )
 print(result.stdout)
+
+with open(args.cli_output_file, mode="w") as f:
+    f.write(result.stdout)
 print(result.stderr)
 
 sys.exit(result.returncode)
