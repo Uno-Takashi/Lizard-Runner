@@ -17,7 +17,7 @@ parser.add_argument("length", type=int)
 parser.add_argument("arguments", type=int)
 parser.add_argument("warnings_only", choices=["true", "false"], type=str)
 parser.add_argument("warning_msvs", choices=["true", "false"], type=str)
-parser.add_argument("ignore_warnings", type=str)
+parser.add_argument("ignore_warnings", type=int)
 parser.add_argument("exclude", type=str)
 parser.add_argument("working_threads", type=int)
 parser.add_argument("xml", choices=["true", "false"], type=str)
@@ -95,8 +95,7 @@ if args.warnings_only.lower() == "true":
 if args.warning_msvs.lower() == "true":
     lizard_args.append("--warning_msvs")
 
-if args.ignore_warnings != "":
-    lizard_args.extend(["--ignore_warnings", args.ignore_warnings])
+lizard_args.extend(["--ignore_warnings", args.ignore_warnings])
 
 if args.exclude != "":
     lizard_args.extend(["--exclude", args.exclude])

@@ -14,10 +14,6 @@ inputs:
       the job will terminate with an error if a warning is acknowledged.
     required: false
     default: "false"
-  ci_mode:
-    description: "lizard cli"
-    required: false
-    default: "false"
   language:
     description: >
       Multiple languages are accepted by separating them by a space.(ex."python cpp java")
@@ -61,7 +57,6 @@ inputs:
   arguments:
     description: >
       Limit for number of parameters
-      If None, this flag is not given to lizard. The default is set to None.
     required: false
     default: "100"
   warnings_only:
@@ -85,7 +80,7 @@ inputs:
       Useful in makefile for legacy code.
       If None, this flag is not given to lizard. The default is set to None.
     required: false
-    default: ""
+    default: "0"
   exclude:
     description: >
       Exclude files that match the pattern. * matches everything, ? matches any
