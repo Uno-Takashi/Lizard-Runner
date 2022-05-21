@@ -107,7 +107,7 @@ if args.whitelist != "":
 
 lizard_args.extend(["|", "tee", args.cli_output_file])
 
-command = " ".join(list(map(str, lizard_args)))
+command = list(map(str, lizard_args))
 
 print("\033[32m" + "Succes Validation" + "\033[0m")
 
