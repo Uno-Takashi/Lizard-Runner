@@ -91,9 +91,10 @@ Threshold=`echo ${db}${Threshold}${db}`
 whitelist=${21}
 whitelist=`echo ${db}${whitelist}${db}`
 
-python_command='python /lib/lizard_argument_validator.py \'\
-                '-language '$language
+python_command=$(echo 'python /lib/lizard_argument_validator.py \'\
+                '-language '$language)
 
+echo $python_command
 eval $python_command
                     
 echo "::group::RunLizard"
