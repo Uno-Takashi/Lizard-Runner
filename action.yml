@@ -13,7 +13,7 @@ inputs:
       Flag to enable CI mode. in CI mode, 
       the job will terminate with an error if a warning is acknowledged.
     required: false
-    default: "false"
+    default: "lizard_cli_output.txt"
   language:
     description: >
       Multiple languages are accepted by separating them by a space.(ex."python cpp java")
@@ -23,7 +23,7 @@ inputs:
       javascript, python, objectivec, ttcn, ruby, php, swift, scala, GDScript,
       go, lua, rust, typescript
     required: false
-    default: "None"
+    default: ""
   verbose:
     description: "Output in verbose mode (long function name)"
     required: false
