@@ -15,6 +15,8 @@ This project is wrapped to use [lizard](http://www.lizard.ws/) as a Github Actio
 
 ## Inputs
 
+Most of the input is the same as in the [lizard](http://www.lizard.ws/), but some original input is required for lizard-runner. Some arguments are also wrapped for convenience.
+
 ## Outputs
 
 ## Usage
