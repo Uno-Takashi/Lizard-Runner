@@ -51,7 +51,7 @@ language_list: list = [
     "None",
 ]
 
-if args.language != "None":
+if args.language != "":
     lizard_args.extend(["--language", args.language])
 
 if args.verbose.lower() == "true":
@@ -59,17 +59,17 @@ if args.verbose.lower() == "true":
 
 lizard_args.extend(["--CCN", args.CCN])
 
-if args.input_file != "None":
+if args.input_file != "":
     input_file_path = Path(args.input_file)
     lizard_args.extend(["--input_file", input_file_path])
 
-if args.output_file != "None":
+if args.output_file != "":
     output_file_path = Path(args.output_file)
     lizard_args.extend(["--output_file", output_file_path])
 
 lizard_args.extend(["--length", args.length])
 
-if args.arguments != "None":
+if args.arguments != "":
     arguments_int: int = int(args.arguments)
     lizard_args.extend(["--arguments", arguments_int])
 
@@ -82,7 +82,7 @@ if args.warning_msvs.lower() == "true":
 if args.ignore_warnings != "None":
     lizard_args.extend(["--ignore_warnings", args.ignore_warnings])
 
-if args.exclude != "None":
+if args.exclude != "":
     lizard_args.extend(["--exclude", args.exclude])
 
 lizard_args.extend(["--working_threads", args.working_threads])
@@ -93,16 +93,16 @@ if args.xml.lower() == "true":
 if args.html.lower() == "true":
     lizard_args.append("--html")
 
-if args.extension != "None":
+if args.extension != "":
     lizard_args.extend(["--extension", args.extension])
 
-if args.sort != "None":
+if args.sort != "":
     lizard_args.extend(["--sort", args.sort])
 
-if args.Threshold != "None":
+if args.Threshold != "":
     lizard_args.extend(["--Threshold", args.Threshold])
 
-if args.whitelist != "None":
+if args.whitelist != "":
     whitelist_path = Path(args.whitelist)
     lizard_args.extend(["--whitelist", whitelist_path])
 
