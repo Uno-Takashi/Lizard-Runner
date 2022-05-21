@@ -8,6 +8,7 @@ echo "::group::ChangeDirectory"
 echo "::group::ValidateArguments"
 
 db='"'
+
 path=$1
 cli_output_file=$2
 cli_output_file=`echo ${db}${cli_output_file}${db}`
@@ -95,8 +96,8 @@ whitelist=${21}
 whitelist=`echo ${db}${whitelist}${db}`
 echo $whitelist
 
-lizard_args=`python /lib/lizard_argument_validator.py \
-                    -language `echo $language` \
+lizard_args=${python /lib/lizard_argument_validator.py \
+                    -language $language \
                     -verbose $verbose \
                     -CCN $CCN \
                     -input_file $input_file \
@@ -115,7 +116,7 @@ lizard_args=`python /lib/lizard_argument_validator.py \
                     -sort $sort \
                     -Threshold $Threshold \
                     -whitelist $whitelist
-                    `
+                    )
 echo "::group::RunLizard"
 
 lizard $lizard_args $path | tee $cli_output_file
