@@ -139,9 +139,10 @@ result = subprocess.run(
     text=True,
 )
 print(result.stdout)
+print(result.stderr)
 
 with open(args.cli_output_file, mode="w") as f:
     f.write(result.stdout)
-print(result.stderr)
+print("::set-output name=random-id::" + args.cli_output_file)
 
 sys.exit(result.returncode)
