@@ -20,6 +20,7 @@ inputs:
     default: "false"
   language:
     description: >
+      Multiple languages are accepted by separating them by a space.(ex."python cpp java")
       List the programming languages you want to analyze. if left empty, it'll
       search for all languages it knows. `lizard -l cpp -l java`searches for
       C++ and Java code. The available languages are: cpp, java, csharp,

@@ -7,7 +7,7 @@ print("::group::ValidateArguments")
 parser = argparse.ArgumentParser(description="Validate the argument of lizard")
 parser.add_argument("path", type=str)
 parser.add_argument("cli_output_file", type=str)
-parser.add_argument("ci_mode", type=str)
+parser.add_argument("ci_mode", choices=["true", "false"], type=str)
 parser.add_argument("language", type=str)
 parser.add_argument("verbose", choices=["true", "false"], type=str)
 parser.add_argument("CCN", type=int)
@@ -30,6 +30,11 @@ parser.add_argument("whitelist", type=Path)
 
 args = parser.parse_args()
 
+
+def surround_double_quotes(x: str):
+    return '"' + str(x) + '"'
+
+
 lizard_args: list = ["lizard"]
 
 language_list: list = [
@@ -50,6 +55,11 @@ language_list: list = [
     "rust",
     "typescript",
 ]
+lizard_paths: list = []
+if args.path != "":
+    args_paths: list = args.path.split()
+    for path in args_paths:
+        lizard_paths.append(Path(path))
 
 if args.language != "":
     args_languages: list = args.language.split()
@@ -110,9 +120,9 @@ if args.Threshold != "":
 
 if args.whitelist != "":
     whitelist_path = Path(args.whitelist)
-    lizard_args.append("-W" + '"' + str(whitelist_path) + '"')
+    lizard_args.append("-W" + surround_double_quotes(whitelist_path))
 
-
+lizard_args.extend(lizard_paths)
 lizard_args.extend(["|", "tee", args.cli_output_file])
 
 command = list(map(str, lizard_args))
