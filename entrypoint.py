@@ -2,6 +2,8 @@ import argparse
 import subprocess
 from pathlib import Path
 
+print("::group::ValidateArguments")
+
 parser = argparse.ArgumentParser(description="Validate the argument of lizard")
 parser.add_argument("path", type=str)
 parser.add_argument("cli_output_file", type=str)
@@ -109,5 +111,8 @@ if args.whitelist != "":
 
 options = " ".join(map(str, lizard_args))
 
-lizard_run = subprocess.run(options, shell=True, stdout=subprocess.PIPE)
+command = "lizard " + options
+
+print("::group::RunningLizard")
+lizard_run = subprocess.run(command, shell=True, stdout=subprocess.PIPE)
 print(lizard_run)
