@@ -139,3 +139,5 @@ result = subprocess.run(
 )
 print(result.stdout)
 print(result.stderr)
+
+print(result.returncode)
