@@ -142,6 +142,7 @@ print(result.stderr)
 
 with open(args.cli_output_file, mode="w") as f:
     f.write(result.stdout)
-print("::set-output name=random-id::" + str(args.cli_output_file))
+
+print("::set-output result_output_path::cli output.txt")
 
 sys.exit(result.returncode)
