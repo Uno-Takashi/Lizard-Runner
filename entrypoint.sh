@@ -93,6 +93,7 @@ Threshold=`echo ${db}${Threshold}${db}`
 
 whitelist=${21}
 whitelist=`echo ${db}${whitelist}${db}`
+echo $whitelist
 
 lizard_args=`python /lib/lizard_argument_validator.py \
                     -language $language \
