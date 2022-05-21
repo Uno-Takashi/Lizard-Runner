@@ -1,5 +1,5 @@
 import argparse
-from asyncio import subprocess
+import subprocess
 from pathlib import Path
 
 parser = argparse.ArgumentParser(description="Validate the argument of lizard")
