@@ -77,11 +77,11 @@ lizard_args.extend(["--CCN", args.CCN])
 
 if args.input_file != "":
     input_file_path = Path(args.input_file)
-    lizard_args.extend(["--input_file", input_file_path])
+    lizard_args.append("-f" + surround_double_quotes(input_file_path))
 
 if args.output_file != "":
     output_file_path = Path(args.output_file)
-    lizard_args.extend(["--output_file", output_file_path])
+    lizard_args.append("-o" + surround_double_quotes(output_file_path))
 
 lizard_args.extend(["--length", args.length])
 

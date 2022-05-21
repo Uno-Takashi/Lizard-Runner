@@ -15,7 +15,7 @@ jobs:
         with:
           path: "./src"
           language: "python cpp"
-          whitelist: "white text.txt"
+          arguments: "1"
       - name: Get the output time
         run: echo -e "${{ steps.lizard.outputs.result_output_path }}"
       - name: Get the output time
