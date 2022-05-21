@@ -29,9 +29,6 @@ parser.add_argument("whitelist", type=Path)
 
 args = parser.parse_args()
 
-print(args)
-
-
 lizard_args: list = ["lizard"]
 
 language_list: list = [
@@ -51,7 +48,6 @@ language_list: list = [
     "lua",
     "rust",
     "typescript",
-    "None",
 ]
 
 if args.language != "":
@@ -109,7 +105,12 @@ if args.whitelist != "":
     whitelist_path = Path(args.whitelist)
     lizard_args.append("-W" + '"' + str(whitelist_path) + '"')
 
-options = map(str, lizard_args)
+command = map(str, lizard_args)
+
 print("::group::RunningLizard")
-lizard_run = subprocess.run(options, shell=True, stdout=subprocess.PIPE)
+print(command)
+
+lizard_run = subprocess.run(
+    command, shell=True, encoding="utf-8", stdout=subprocess.PIPE
+)
 print(lizard_run.stdout)
