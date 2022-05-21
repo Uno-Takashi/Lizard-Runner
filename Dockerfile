@@ -1,4 +1,4 @@
-FROM python:3.10
+FROM python:3.9
 
 ADD pyproject.toml /pyproject.toml
 RUN pip install poetry
