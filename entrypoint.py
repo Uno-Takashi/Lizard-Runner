@@ -107,7 +107,7 @@ if args.whitelist != "":
     lizard_args.append("-W" + '"' + str(whitelist_path) + '"')
 
 
-lizard_args.extend(["|", "tea", args.cli_output_file])
+lizard_args.extend(["|", "tee", args.cli_output_file])
 
 command = list(map(str, lizard_args))
 
@@ -119,6 +119,11 @@ print(" ".join(command))
 os.system(" ".join(command))
 
 result = subprocess.run(
-    [" ".join(command)], shell=True, stdout=subprocess.PIPE, text=True
+    [" ".join(command)],
+    shell=True,
+    stdout=subprocess.PIPE,
+    stderr=subprocess.PIPE,
+    text=True,
 )
-print(result)
+print(result.stdout)
+print(result.stderr)
