@@ -6,10 +6,12 @@
 
 This project is wrapped to use [lizard](http://www.lizard.ws/) as a Github Action.
 
-- Rapid Container
-  - The lizard-runner employs a lightweight container to achieve build times that are competitive with the combination of actions/setup-python and pip.
-- Easy-to-use variable specification
+- **Rapid Container**
+  - The lizard-runner employs a lightweight container to achieve build times that are competitive with the combination of actions/setup-python and pip. In most cases, preparation to begin analysis takes less than 30 seconds.
+- **Easy-to-use variable specification**
   - Wrapping command line arguments allows for more intuitive execution.
+- **CI mode is equipped**
+  - In CI mode, the job will fail if a warning is issued. This feature prevents overly complex code from being merged.
 
 ## Inputs
 
