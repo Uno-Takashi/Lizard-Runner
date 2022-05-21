@@ -4,12 +4,14 @@
 [![Python](https://img.shields.io/badge/Python-F9DC3E.svg?logo=python&style=flat)](https://www.python.org/)
 [![Docker](https://img.shields.io/badge/-Docker-EEE.svg?logo=docker&style=flat)](https://www.docker.com/)
 
-github action to run the lizard
+This project is wrapped to use [lizard](http://www.lizard.ws/) as a Github Action.
 
 ## Inputs
+
 
 ## Outputs
 
 ## Usage
 
 GitHub Marcket Place
+
