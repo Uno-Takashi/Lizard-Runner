@@ -143,6 +143,6 @@ print(result.stderr)
 with open(args.cli_output_file, mode="w") as f:
     f.write(result.stdout)
 
-print("::set-output result_output_path::cli output.txt")
+print("::set-output result_output_path::cli")
 
 sys.exit(result.returncode)
