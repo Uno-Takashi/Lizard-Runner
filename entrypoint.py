@@ -1,5 +1,4 @@
 import argparse
-import os
 import subprocess
 from pathlib import Path
 
@@ -8,6 +7,7 @@ print("::group::ValidateArguments")
 parser = argparse.ArgumentParser(description="Validate the argument of lizard")
 parser.add_argument("path", type=str)
 parser.add_argument("cli_output_file", type=str)
+parser.add_argument("ci_mode", type=str)
 parser.add_argument("language", type=str)
 parser.add_argument("verbose", choices=["true", "false"], type=str)
 parser.add_argument("CCN", type=int)
@@ -115,8 +115,6 @@ print("\033[32m" + "Succes Validation" + "\033[0m")
 
 print("::group::RunningLizard")
 print(" ".join(command))
-
-os.system(" ".join(command))
 
 result = subprocess.run(
     [" ".join(command)],

@@ -9,9 +9,15 @@ inputs:
     required: false
     default: "./"
   cli_output_file:
+    description: >
+      Flag to enable CI mode. in CI mode, 
+      the job will terminate with an error if a warning is acknowledged.
+    required: false
+    default: "false"
+  ci_mode:
     description: "lizard cli"
     required: false
-    default: "./lizard_cli.txt"
+    default: "false"
   language:
     description: >
       List the programming languages you want to analyze. if left empty, it'll
