@@ -143,6 +143,6 @@ print(result.stderr)
 
 with open(args.cli_output_file, mode="w") as f:
     f.write(result.stdout)
-print("::set-output name=random-id::" + args.cli_output_file)
+print("::set-output name=random-id::" + str(args.cli_output_file))
 
 sys.exit(result.returncode)
