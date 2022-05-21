@@ -119,7 +119,9 @@ if args.sort != "":
 
 if args.Threshold != "":
     args_threshold: list = args.Threshold.split()
+    print(args_threshold)
     for threshold in args_threshold:
+        print(threshold)
         lizard_args.extend("-T" + surround_double_quotes(threshold))
 
 if args.whitelist != "":
