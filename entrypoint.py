@@ -1,5 +1,6 @@
 import argparse
 import subprocess
+import sys
 from pathlib import Path
 
 print("::group::ValidateArguments")
@@ -140,4 +141,4 @@ result = subprocess.run(
 print(result.stdout)
 print(result.stderr)
 
-print(result.returncode)
+sys.exit(result.returncode)
