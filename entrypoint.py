@@ -111,7 +111,7 @@ if args.html.lower() == "true":
     lizard_args.append("--html")
 
 if args.extension != "":
-    lizard_args.extend(["--extension", args.extension])
+    lizard_args.append(["-E" + surround_double_quotes(args.extension)])
 
 if args.sort != "":
     lizard_args.extend(["--sort", args.sort])
