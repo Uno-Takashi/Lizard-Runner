@@ -15,7 +15,6 @@ jobs:
         with:
           path: "./src"
           language: "python cpp"
-          arguments: "1"
       - name: Get the output time
         run: echo -e "${{ steps.lizard.outputs.result_output_path }}"
       - name: Get the output time
