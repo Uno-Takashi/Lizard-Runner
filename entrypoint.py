@@ -100,6 +100,11 @@ lizard_args.extend(["--ignore_warnings", args.ignore_warnings])
 if args.exclude != "":
     lizard_args.extend(["--exclude", args.exclude])
 
+if args.Threexcludeshold != "":
+    args_exclude: list = args.exclude.split()
+    for exclude in args_exclude:
+        lizard_args.extend("-x" + surround_double_quotes(exclude))
+
 lizard_args.extend(["--working_threads", args.working_threads])
 
 if args.xml.lower() == "true":
@@ -114,8 +119,11 @@ if args.extension != "":
 if args.sort != "":
     lizard_args.extend(["--sort", args.sort])
 
+
 if args.Threshold != "":
-    lizard_args.extend(["--Threshold", args.Threshold])
+    args_threshold: list = args.Threshold.split()
+    for threshold in args_threshold:
+        lizard_args.extend("-T" + surround_double_quotes(threshold))
 
 if args.whitelist != "":
     whitelist_path = Path(args.whitelist)

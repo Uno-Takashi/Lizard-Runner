@@ -136,7 +136,7 @@ inputs:
       report warning if a function exceed the limit
       If None, this flag is not given to lizard. The default is set to None.
     required: false
-    default: ""
+    default: "nloc=1000000"
   whitelist:
     description: >
       The path and file name to the whitelist file. It's './whitelizard.txt' by
