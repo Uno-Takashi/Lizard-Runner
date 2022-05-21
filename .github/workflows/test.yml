@@ -21,3 +21,8 @@ jobs:
         run: echo -e "${{ steps.lizard.outputs.result_output_path }}"
       - name: Get the output time
         run: ls
+      - name: Archive lizard log
+        uses: actions/upload-artifact@v2
+        with:
+          name: "lizard_cli_output"
+          path: "./lizard_cli_output.txt"
