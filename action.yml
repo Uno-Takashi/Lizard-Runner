@@ -63,7 +63,7 @@ inputs:
       Limit for number of parameters
       If None, this flag is not given to lizard. The default is set to None.
     required: false
-    default: ""
+    default: "100"
   warnings_only:
     description: >
       Show warnings only, using clang/gcc's warning format for printing
