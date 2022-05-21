@@ -1,10 +1,6 @@
 #!/bin/bash
 set -eax
 
-echo "::group::ChangeDirectory"
-
-
-
 echo "::group::ValidateArguments"
 
 db='"'
@@ -96,7 +92,7 @@ whitelist=`echo ${db}${whitelist}${db}`
 echo $whitelist
 
 python /lib/lizard_argument_validator.py \
-                -language $language \
+                -language ${echo $language} \
                 -verbose $verbose \
                 -CCN $CCN \
                 -input_file $input_file \
