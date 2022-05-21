@@ -104,6 +104,6 @@ if args.Threshold != "":
 
 if args.whitelist != "":
     whitelist_path = Path(args.whitelist)
-    lizard_args.extend(["--whitelist", whitelist_path])
+    lizard_args.extend(["-W" + '"' + whitelist_path + '"'])
 
 print(" ".join(map(str, lizard_args)))

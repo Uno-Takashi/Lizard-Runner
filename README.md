@@ -6,12 +6,15 @@
 
 This project is wrapped to use [lizard](http://www.lizard.ws/) as a Github Action.
 
-## Inputs
+- Rapid Container
+  - The lizard-runner employs a lightweight container to achieve build times that are competitive with the combination of actions/setup-python and pip.
+- Easy-to-use variable specification
+  - Wrapping command line arguments allows for more intuitive execution.
 
+## Inputs
 
 ## Outputs
 
 ## Usage
 
 GitHub Marcket Place
-
