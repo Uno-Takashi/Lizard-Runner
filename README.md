@@ -13,6 +13,20 @@ This project is wrapped to use [lizard](http://www.lizard.ws/) as a Github Actio
 - **CI mode is equipped**
   - In CI mode, the job will fail if a warning is issued. This feature prevents overly complex code from being merged.
 
+## Introduction
+
+As code becomes more complex, it becomes less maintainable.
+
+Often, code that was easy to modify in the early stages of a product's life can become so complex and huge before long that it becomes unmaintainable.
+
+## Why We Built It
+
+In general, CI allows engineers to gain psychological security by keeping test code running. That is, they continue to be assured that the code they add will not have a fatal negative impact on the service.
+
+We wanted to incorporate and visualize code complexity within the CI framework. By doing this, we wanted to make it more psychologically safe for engineers to merge code, ensuring that the code they wrote would not become a bottleneck in the refurbishment.
+
+For this reason, we have created a Github action that makes it easy to run lizard!
+
 ## Inputs
 
 Most of the input is the same as in the [lizard](http://www.lizard.ws/), but some original input is required for lizard-runner. Some arguments are also wrapped for convenience.
