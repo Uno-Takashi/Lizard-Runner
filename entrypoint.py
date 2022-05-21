@@ -52,7 +52,13 @@ language_list: list = [
 ]
 
 if args.language != "":
-    lizard_args.extend(["--language", args.language])
+    args_languages: list = args.language.split()
+    for language in args_languages:
+        if language in language_list:
+            lizard_args.extend(["--language", language])
+        else:
+            raise ValueError("Not present in the list of available languages.")
+
 
 if args.verbose.lower() == "true":
     lizard_args.append("--verbose")
