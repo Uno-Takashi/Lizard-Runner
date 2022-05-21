@@ -1,5 +1,5 @@
 import argparse
-import subprocess
+import os
 from pathlib import Path
 
 print("::group::ValidateArguments")
@@ -112,7 +112,4 @@ print("\033[32m" + "Succes Validation" + "\033[0m")
 print("::group::RunningLizard")
 print(command)
 
-lizard_run = subprocess.run(
-    command, shell=True, encoding="utf-8", stdout=subprocess.PIPE
-)
-print(lizard_run.stdout)
+os.system(" ".join(command))
