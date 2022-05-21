@@ -119,10 +119,8 @@ if args.sort != "":
 
 if args.Threshold != "":
     args_threshold: list = args.Threshold.split()
-    print(args_threshold)
     for threshold in args_threshold:
-        print(threshold)
-        lizard_args.extend("-T" + surround_double_quotes(threshold))
+        lizard_args.append("-T" + surround_double_quotes(threshold))
 
 if args.whitelist != "":
     whitelist_path = Path(args.whitelist)
