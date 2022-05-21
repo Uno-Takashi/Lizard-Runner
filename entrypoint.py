@@ -78,7 +78,7 @@ if args.warnings_only.lower() == "true":
 if args.warning_msvs.lower() == "true":
     lizard_args.append("--warning_msvs")
 
-if args.ignore_warnings != "None":
+if args.ignore_warnings != "":
     lizard_args.extend(["--ignore_warnings", args.ignore_warnings])
 
 if args.exclude != "":
@@ -104,8 +104,6 @@ if args.Threshold != "":
 if args.whitelist != "":
     whitelist_path = Path(args.whitelist)
     lizard_args.append("-W" + '"' + str(whitelist_path) + '"')
-
-lizard_args.extend(["|", "tee", args.cli_output_file])
 
 command = list(map(str, lizard_args))
 
