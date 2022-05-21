@@ -95,27 +95,27 @@ whitelist=${21}
 whitelist=`echo ${db}${whitelist}${db}`
 echo $whitelist
 
-lizard_args=$(python /lib/lizard_argument_validator.py \
-                    -language $language \
-                    -verbose $verbose \
-                    -CCN $CCN \
-                    -input_file $input_file \
-                    -output_file $output_file \
-                    -length $length \
-                    -arguments $arguments \
-                    -warnings_only $warnings_only \
-                    -warning_msvs $warning_msvs \
-                    -ignore_warnings $ignore_warnings \
-                    -exclude $exclude \
-                    -working_threads $working_threads \
-                    -xml $xml \
-                    -html $html \
-                    -modified $modified \
-                    -extension $extension \
-                    -sort $sort \
-                    -Threshold $Threshold \
-                    -whitelist $whitelist
-                    )
+python /lib/lizard_argument_validator.py \
+                -language $language \
+                -verbose $verbose \
+                -CCN $CCN \
+                -input_file $input_file \
+                -output_file $output_file \
+                -length $length \
+                -arguments $arguments \
+                -warnings_only $warnings_only \
+                -warning_msvs $warning_msvs \
+                -ignore_warnings $ignore_warnings \
+                -exclude $exclude \
+                -working_threads $working_threads \
+                -xml $xml \
+                -html $html \
+                -modified $modified \
+                -extension $extension \
+                -sort $sort \
+                -Threshold $Threshold \
+                -whitelist $whitelist
+                    
 echo "::group::RunLizard"
 
 lizard $lizard_args $path | tee $cli_output_file
