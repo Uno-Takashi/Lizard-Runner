@@ -32,7 +32,7 @@ args = parser.parse_args()
 print(args)
 
 
-lizard_args: list = []
+lizard_args: list = ["lizard"]
 
 language_list: list = [
     "cpp",
@@ -109,10 +109,7 @@ if args.whitelist != "":
     whitelist_path = Path(args.whitelist)
     lizard_args.append("-W" + '"' + str(whitelist_path) + '"')
 
-options = " ".join(map(str, lizard_args))
-
-command = "lizard " + options
-
+options = map(str, lizard_args)
 print("::group::RunningLizard")
-lizard_run = subprocess.run(command, shell=True, stdout=subprocess.PIPE)
-print(lizard_run)
+lizard_run = subprocess.run(options, shell=True, stdout=subprocess.PIPE)
+print(lizard_run.stdout)
