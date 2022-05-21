@@ -5,7 +5,7 @@ RUN pip install -r requirement.txt
 
 ADD lizard_argument_validator.py /lib/lizard_argument_validator.py
 
-ADD entrypoint.sh /entrypoint.sh
+ADD entrypoint.py /entrypoint.py
 RUN chmod +x /entrypoint.sh
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["pythyon","/entrypoint.py"]
