@@ -1,4 +1,5 @@
 import argparse
+from asyncio import subprocess
 from pathlib import Path
 
 parser = argparse.ArgumentParser(description="Validate the argument of lizard")
@@ -106,4 +107,6 @@ if args.whitelist != "":
     whitelist_path = Path(args.whitelist)
     lizard_args.append("-W" + '"' + str(whitelist_path) + '"')
 
-print(" ".join(map(str, lizard_args)))
+options = " ".join(map(str, lizard_args))
+
+subprocess.run(options, shell=True)
