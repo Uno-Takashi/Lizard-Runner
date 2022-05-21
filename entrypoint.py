@@ -35,7 +35,7 @@ def surround_double_quotes(x: str):
     return '"' + str(x) + '"'
 
 
-lizard_args: list = ["lizard"]
+lizard_args: list = ["poetry", "run", "lizard"]
 
 language_list: list = [
     "cpp",
