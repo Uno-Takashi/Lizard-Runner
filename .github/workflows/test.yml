@@ -1,3 +1,5 @@
+name: Test Lizard Runner
+
 on: [push]
 
 jobs:
