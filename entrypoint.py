@@ -121,7 +121,7 @@ if args.whitelist != "":
     lizard_args.append("-W" + surround_double_quotes(whitelist_path))
 
 lizard_args.extend(lizard_paths)
-lizard_args.extend(["|", "tee", args.cli_output_file])
+# lizard_args.extend(["|", "tee", args.cli_output_file])
 
 command = list(map(str, lizard_args))
 
