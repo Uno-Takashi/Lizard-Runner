@@ -7,7 +7,7 @@ echo "::group::ChangeDirectory"
 
 echo "::group::ValidateArguments"
 
-db='"'
+db="'"
 path=$1
 cli_output_file=$2
 cli_output_file=`echo ${db}${cli_output_file}${db}`
