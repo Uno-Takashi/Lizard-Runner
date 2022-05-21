@@ -90,28 +90,11 @@ Threshold=`echo ${db}${Threshold}${db}`
 
 whitelist=${21}
 whitelist=`echo ${db}${whitelist}${db}`
-echo $whitelist
 
-python /lib/lizard_argument_validator.py \
-                -language ${eval $language} \
-                -verbose $verbose \
-                -CCN $CCN \
-                -input_file $input_file \
-                -output_file $output_file \
-                -length $length \
-                -arguments $arguments \
-                -warnings_only $warnings_only \
-                -warning_msvs $warning_msvs \
-                -ignore_warnings $ignore_warnings \
-                -exclude $exclude \
-                -working_threads $working_threads \
-                -xml $xml \
-                -html $html \
-                -modified $modified \
-                -extension $extension \
-                -sort $sort \
-                -Threshold $Threshold \
-                -whitelist $whitelist
+python_command='python /lib/lizard_argument_validator.py \'\
+                '-language '$language
+
+eval $python_command
                     
 echo "::group::RunLizard"
 
