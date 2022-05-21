@@ -105,11 +105,14 @@ if args.whitelist != "":
     whitelist_path = Path(args.whitelist)
     lizard_args.append("-W" + '"' + str(whitelist_path) + '"')
 
+
+lizard_args.extend(["|", "tea", args.cli_output_file])
+
 command = list(map(str, lizard_args))
 
 print("\033[32m" + "Succes Validation" + "\033[0m")
 
 print("::group::RunningLizard")
-print(command)
+print(" ".join(command))
 
 os.system(" ".join(command))
