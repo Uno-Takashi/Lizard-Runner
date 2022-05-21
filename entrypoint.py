@@ -105,7 +105,7 @@ if args.whitelist != "":
     whitelist_path = Path(args.whitelist)
     lizard_args.append("-W" + '"' + str(whitelist_path) + '"')
 
-command = map(str, lizard_args)
+command = " ".join(list(map(str, lizard_args)))
 
 print("::group::RunningLizard")
 print(command)
