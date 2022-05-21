@@ -97,7 +97,7 @@ whitelist=`echo ${db}${whitelist}${db}`
 echo $whitelist
 
 lizard_args=$(python /lib/lizard_argument_validator.py \
-                    -language $language \
+                    -language $(echo $language) \
                     -verbose $verbose \
                     -CCN $CCN \
                     -input_file $input_file \
