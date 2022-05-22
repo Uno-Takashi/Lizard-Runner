@@ -66,6 +66,20 @@ See "Inputs" for a detailed description of all the arguments that can be set.
 
 Most of the input is the same as in the [lizard](http://www.lizard.ws/), but some original input is required for lizard-runner. Some arguments are also wrapped for convenience.
 
+For convenience, we have divided the arguments into several "classifications".
+
+- Action Settings
+  - Arguments to be used to set Action.
+  - Arguments that do not exist in the original lizard.
+- Wrapped Arguments
+  - Wrapped arguments that exist in the original lizard.
+  - For example, arguments that had to be specified individually in the original lizard can be passed together as a space-separated list.
+  - e.g) `language: "python cpp"` → `lizard --language python --language cpp`
+- Original Arguments
+  - Arguments passed directly to lizard.
+- Flag Arguments
+  - Flag Argument." false" or "true" is passed; if "true" the flag is enabled.
+
 ## 📤 Outputs
 
 The paths to the two files are output. The following outputs can be accessed via ${{ steps.<step-id>.outputs }} from this action
