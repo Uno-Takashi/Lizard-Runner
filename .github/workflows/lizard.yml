@@ -19,12 +19,10 @@ jobs:
           language: "python cpp"
           whitelist: "white text.txt"
           cli_output_file: "cli output.txt"
-      - name: Get the output time
+      - name: Get result_output_file
         run: echo -e "${{ steps.lizard.outputs.result_output_path }}"
-      - name: Get the output time
+      - name: Get cli_output_file
         run: echo -e "${{ steps.lizard.outputs.cli_output_path }}"
-      - name: Get the output time
-        run: ls
       - name: Archive lizard log
         uses: actions/upload-artifact@v2
         with:

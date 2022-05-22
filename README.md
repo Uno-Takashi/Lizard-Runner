@@ -30,12 +30,72 @@ For this reason, we have created a Github action that makes it easy to run lizar
 
 ## 📚 Usage
 
+The following code is the minimum code to make Lizard-Runner work. In the following cases, lizard is run with default settings.
+
+```yml
+name: Lizard Runner
+on:
+  push:
+
+jobs:
+  lizard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Lizard Runner
+        uses: Uno-Takashi/lizard-runner@v1
+```
+
+lizard execution options can be passed as arguments. For example, the case for setting up CCN and execution paths is as follows.
+
+```yml
+      - name: Lizard Runner
+        uses: Uno-Takashi/lizard-runner@v1
+        with:
+          path: "./src ./libs"
+          CCN: "20"
+```
+
+See "Inputs" for a detailed description of all the arguments that can be set.
+
 ## 📥 Inputs
 
 Most of the input is the same as in the [lizard](http://www.lizard.ws/), but some original input is required for lizard-runner. Some arguments are also wrapped for convenience.
 
 ## 📤 Outputs
 
+The paths to the two files are output.
+
+### outputs.cli_output_path
+
+It will always exist.
+
+The path to the file where the output result of cli is saved when lizard is run. In the default setting, the output is saved in "lizard_cli_output.txt".
+
+### outputs.result_output_path
+
+```yml
+      - name: test-action
+        uses: ./ # Uses an action in the root directory
+        id: lizard
+        with:
+          path: "./"
+          language: "python cpp"
+          whitelist: "white text.txt"
+          cli_output_file: "cli output.txt"
+      - name: Get result_output_file
+        run: echo -e "${{ steps.lizard.outputs.result_output_path }}"
+      - name: Get cli_output_file
+        run: echo -e "${{ steps.lizard.outputs.cli_output_path }}"
+      - name: Archive lizard log
+        uses: actions/upload-artifact@v2
+        with:
+          name: "lizard_cli_output"
+          path: "${{ steps.lizard.outputs.cli_output_path }}"
+```
+
 ## 🛒 How to Get
 
 GitHub Marcket Place
+
+## ⌨ Development
