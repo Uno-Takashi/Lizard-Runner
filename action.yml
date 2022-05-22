@@ -14,6 +14,12 @@ inputs:
       the job will terminate with an error if a warning is acknowledged.
     required: false
     default: "lizard_cli_output.txt"
+  timeout:
+    description: >
+      The time until the lizard process timeout.
+      Reduces the risk of consuming time without terminating when a command is invalid.
+    required: false
+    default: "1200"
   language:
     description: >
       Multiple languages are accepted by separating them by a space.(ex."python cpp java")
@@ -163,6 +169,7 @@ runs:
   args:
     - ${{ inputs.path }}
     - ${{ inputs.cli_output_file }}
+    - ${{ inputs.timeout }}
     - ${{ inputs.language }}
     - ${{ inputs.verbose }}
     - ${{ inputs.CCN }}

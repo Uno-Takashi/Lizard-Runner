@@ -8,6 +8,7 @@ print("::group::ValidateArguments")
 parser = argparse.ArgumentParser(description="Validate the argument of lizard")
 parser.add_argument("path", type=str)
 parser.add_argument("cli_output_file", type=Path)
+parser.add_argument("timeout", type=int)
 parser.add_argument("language", type=str)
 parser.add_argument("verbose", choices=["true", "false"], type=str)
 parser.add_argument("CCN", type=int)
@@ -146,6 +147,7 @@ result = subprocess.run(
     stdout=subprocess.PIPE,
     stderr=subprocess.PIPE,
     text=True,
+    timeout=args.timeout,
 )
 print(result.stdout)
 print(result.stderr)
