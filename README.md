@@ -74,15 +74,12 @@ The path to the file where the output result of cli is saved when lizard is run.
 
 ### outputs.result_output_path
 
+### See outputs
+
 ```yml
       - name: test-action
         uses: ./ # Uses an action in the root directory
         id: lizard
-        with:
-          path: "./"
-          language: "python cpp"
-          whitelist: "white text.txt"
-          cli_output_file: "cli output.txt"
       - name: Get result_output_file
         run: echo -e "${{ steps.lizard.outputs.result_output_path }}"
       - name: Get cli_output_file

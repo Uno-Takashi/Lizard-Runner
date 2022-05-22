@@ -3,22 +3,18 @@ name: Lizard Runner
 on: [push]
 
 jobs:
-  test-action:
+  lizard:
     runs-on: ubuntu-latest
     name: test-action
     steps:
-      # To use this repository's private action,
-      # you must check out the repository
       - name: Checkout
         uses: actions/checkout@v3
       - name: test-action
-        uses: ./ # Uses an action in the root directory
+        uses: ./
         id: lizard
         with:
           path: "./"
-          language: "python cpp"
-          whitelist: "white text.txt"
-          cli_output_file: "cli output.txt"
+          language: "python"
       - name: Get result_output_file
         run: echo -e "${{ steps.lizard.outputs.result_output_path }}"
       - name: Get cli_output_file
