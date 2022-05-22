@@ -113,3 +113,7 @@ The paths to the two files are output. The following outputs can be accessed via
 [Lizard Runner · Actions · GitHub Marketplace](https://github.com/marketplace/actions/lizard-runner)
 
 ## ⌨ Development
+
+Develop according to [GitHub flow](https://docs.github.com/en/get-started/quickstart/github-flow)
+
+If you have any questions, feel free to ask in the [Q&A](https://github.com/Uno-Takashi/lizard-runner/discussions/new?category=q-a)
