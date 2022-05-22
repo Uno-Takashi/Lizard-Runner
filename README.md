@@ -68,8 +68,7 @@ Most of the input is the same as in the [lizard](http://www.lizard.ws/), but som
 
 ## 📤 Outputs
 
-The paths to the two files are output.
-The following outputs can be accessed via ${{ steps.<step-id>.outputs }} from this action
+The paths to the two files are output. The following outputs can be accessed via ${{ steps.<step-id>.outputs }} from this action
 
 |       **Name**       |                                  **Description**                                 |
 |:--------------------:|:--------------------------------------------------------------------------------:|
@@ -79,9 +78,11 @@ The following outputs can be accessed via ${{ steps.<step-id>.outputs }} from th
 ### See outputs
 
 ```yml
-      - name: test-action
-        uses: ./ # Uses an action in the root directory
+      - name: Lizard Runner
+        uses: Uno-Takashi/lizard-runner@v1
         id: lizard
+        with:
+            input_file: "lizard_output.xml"
       - name: Get result_output_file
         run: echo -e "${{ steps.lizard.outputs.result_output_path }}"
       - name: Get cli_output_file
