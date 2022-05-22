@@ -1,0 +1,33 @@
+name: pyt
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+      - develop
+jobs:
+  pyt:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: install utils
+        run: |
+          sudo apt-get update
+          sudo apt-get install moreutils -y
+      - uses: actions/setup-python@v3
+        with:
+          python-version: "3.9"
+      - name: install python-taint
+        run: pip install python-taint
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: run pyt
+        run: |
+          pyt -o pyt.txt ./
+      - name: Archive pyt log
+        if: always()
+        uses: actions/upload-artifact@v2
+        with:
+          name: pyt-report
+          path: ./pyt.txt

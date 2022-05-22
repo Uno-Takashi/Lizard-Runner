@@ -4,10 +4,10 @@
 [![Python](https://img.shields.io/badge/Python-F9DC3E.svg?logo=python&style=flat)](https://www.python.org/)
 [![Docker](https://img.shields.io/badge/-Docker-EEE.svg?logo=docker&style=flat)](https://www.docker.com/)
 
-This project is wrapped to use [lizard](http://www.lizard.ws/) as a Github Action.
+Lizard Runner is a third-party OSS Github Action for easy execution of [lizard](http://www.lizard.ws/).
 
 - **Rapid Container**
-  - The lizard-runner employs a lightweight container to achieve build times that are competitive with the combination of actions/setup-python and pip. In most cases, preparation to begin analysis takes less than 30 seconds.
+  - The Lizard Runner employs a lightweight container to achieve build times that are competitive with the combination of actions/setup-python and pip. In most cases, preparation to begin analysis takes less than 30 seconds.
 - **Easy-to-use variable specification**
   - Wrapping command line arguments allows for more intuitive execution.
 - **Can be embedded in CI**

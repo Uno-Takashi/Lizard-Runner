@@ -27,6 +27,7 @@ parser.add_argument("extension", type=str)
 parser.add_argument("sort", type=str)
 parser.add_argument("Threshold", type=str)
 parser.add_argument("whitelist", type=Path)
+parser.add_argument("optional_args", type="str")
 
 args = parser.parse_args()
 

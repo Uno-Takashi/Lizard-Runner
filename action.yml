@@ -143,6 +143,14 @@ inputs:
       default. Find more information in README.
     required: false
     default: "./whitelizard.txt"
+  optional_args:
+    description: >
+      optional_args unconditionally appends the given string to the end of the command. 
+      This option is not recommended. 
+      It is intended for limited use only when the given input variables alone 
+      do not accomplish the intended purpose. (e.g., "--something_flag input")
+    required: false
+    default: ""
 outputs:
   result_output_path:
     description: ""
@@ -172,3 +180,4 @@ runs:
     - ${{ inputs.sort }}
     - ${{ inputs.Threshold }}
     - ${{ inputs.whitelist }}
+    - ${{ inputs.optional_args }}
