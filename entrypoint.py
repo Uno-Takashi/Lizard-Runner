@@ -27,7 +27,7 @@ parser.add_argument("extension", type=str)
 parser.add_argument("sort", type=str)
 parser.add_argument("Threshold", type=str)
 parser.add_argument("whitelist", type=Path)
-parser.add_argument("optional_args", type="str")
+parser.add_argument("optional_args", type=str)
 
 args = parser.parse_args()
 
@@ -126,7 +126,8 @@ if args.Threshold != "":
 if args.whitelist != "":
     whitelist_path = Path(args.whitelist)
     lizard_args.append("-W" + surround_double_quotes(whitelist_path))
-
+if args.optional_args != "":
+    lizard_args.append(args.optional_args)
 lizard_args.extend(lizard_paths)
 
 command = list(map(str, lizard_args))

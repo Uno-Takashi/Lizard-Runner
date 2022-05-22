@@ -27,6 +27,7 @@ jobs:
         run: |
           bandit ./ -r -o ./bandit.txt -f txt
       - name: Archive bandit log
+        if: always()
         uses: actions/upload-artifact@v2
         continue-on-error: true
         with:
