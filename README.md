@@ -14,13 +14,13 @@ Lizard Runner is a third-party OSS Github Action for easy execution of [lizard](
 - **Can be embedded in CI**
   - The complexity of the code can always be measured. This prevents the inclusion of overly complex codes.
 
-## Introduction
+## 🗞️ Introduction
 
 As code becomes more complex, it becomes less maintainable.
 
 Often, code that was easy to modify in the early stages of a product's life can become so complex and huge before long that it becomes unmaintainable.
 
-## Why We Built It
+## 🛠️ Why We Built It
 
 In general, CI allows engineers to gain psychological security by keeping test code running. That is, they continue to be assured that the code they add will not have a fatal negative impact on the service.
 
@@ -28,12 +28,12 @@ We wanted to incorporate and visualize code complexity within the CI framework. 
 
 For this reason, we have created a Github action that makes it easy to run lizard!
 
-## Inputs
+## 📥 Inputs
 
 Most of the input is the same as in the [lizard](http://www.lizard.ws/), but some original input is required for lizard-runner. Some arguments are also wrapped for convenience.
 
-## Outputs
+## 📤 Outputs
 
-## Usage
+## 📚 Usage
 
 GitHub Marcket Place
