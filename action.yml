@@ -18,8 +18,10 @@ inputs:
     description: >
       The time until the lizard process timeout.
       Reduces the risk of consuming time without terminating when a command is invalid.
+      In general, there is no need to change from the default time, but for very large projects, 
+      it should be set appropriately.
     required: false
-    default: "1200"
+    default: "600"
   language:
     description: >
       Multiple languages are accepted by separating them by a space.(ex."python cpp java")
