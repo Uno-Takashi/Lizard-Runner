@@ -78,7 +78,7 @@ For convenience, we have divided the arguments into several "classifications".
 - Original Arguments
   - Arguments passed directly to lizard.
 - Flag Arguments
-  - Flag Argument." false" or "true" is passed; if "true" the flag is enabled.
+  - Flag Argument." false" or "true" is passed. if "true" the flag is enabled.
 
 The following is a summary of the arguments that can be specified. Details on the meaning of the arguments and the values to be given are provided in the [wiki](https://github.com/Uno-Takashi/lizard-runner/wiki).
 
