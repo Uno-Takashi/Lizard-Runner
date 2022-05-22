@@ -3,6 +3,7 @@
 [![pyt](https://github.com/Uno-Takashi/lizard-runner/actions/workflows/pyt.yml/badge.svg?branch=main&event=push)](https://github.com/Uno-Takashi/lizard-runner/actions/workflows/pyt.yml)
 [![Lizard Runner](https://github.com/Uno-Takashi/lizard-runner/actions/workflows/lizard.yml/badge.svg?branch=main&event=push)](https://github.com/Uno-Takashi/lizard-runner/actions/workflows/lizard.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/Uno-Takashi/lizard-runner/blob/main/LICENSE)
+[![Contributors](https://img.shields.io/github/contributors/Uno-Takashi/lizard-runner)](https://github.com/Uno-Takashi/lizard-runner/graphs/contributors)
 [![Python](https://img.shields.io/badge/Python-F9DC3E.svg?logo=python&style=flat)](https://www.python.org/)
 [![Docker](https://img.shields.io/badge/-Docker-EEE.svg?logo=docker&style=flat)](https://www.docker.com/)
 
@@ -74,6 +75,8 @@ It will always exist.
 The path to the file where the output result of cli is saved when lizard is run. In the default setting, the output is saved in "lizard_cli_output.txt".
 
 ### outputs.result_output_path
+
+Output only if "input_file" is given. lizard's output_file directory. ( e.g. "lizard_output.xml" )
 
 ### See outputs
 
