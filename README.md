@@ -80,6 +80,8 @@ For convenience, we have divided the arguments into several "classifications".
 - Flag Arguments
   - Flag Argument." false" or "true" is passed; if "true" the flag is enabled.
 
+The following is a summary of the arguments that can be specified. Details on the meaning of the arguments and the values to be given are provided in the [wiki](https://github.com/Uno-Takashi/lizard-runner/wiki).
+
 |      **Name**     |     **classification** |         **Default**     |                                                                                                             **Description**                                                                                                            |
 |:-----------------:|:----------------------:|:-----------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | `path`            | Action Settings        | "./"                    | The path given to the command. The lizard is executed against this path.   It is wrapped so that multiple path can be given at once by separating them   with a space. Therefore, as a rule, paths containing   spaces cannot be used. |
