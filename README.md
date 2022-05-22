@@ -28,12 +28,14 @@ We wanted to incorporate and visualize code complexity within the CI framework. 
 
 For this reason, we have created a Github action that makes it easy to run lizard!
 
+## 📚 Usage
+
 ## 📥 Inputs
 
 Most of the input is the same as in the [lizard](http://www.lizard.ws/), but some original input is required for lizard-runner. Some arguments are also wrapped for convenience.
 
 ## 📤 Outputs
 
-## 📚 Usage
+## 🛒 How to Get
 
 GitHub Marcket Place
