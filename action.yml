@@ -154,6 +154,8 @@ inputs:
 outputs:
   result_output_path:
     description: ""
+  cli_output_path:
+    description: ""
 
 runs:
   using: "docker"

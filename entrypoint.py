@@ -80,9 +80,11 @@ if args.input_file != "":
     input_file_path = Path(args.input_file)
     lizard_args.append("-f" + surround_double_quotes(input_file_path))
 
+output_file_flag = False
 if args.output_file != "":
     output_file_path = Path(args.output_file)
     lizard_args.append("-o" + surround_double_quotes(output_file_path))
+    output_file_flag = True
 
 lizard_args.extend(["--length", args.length])
 
@@ -126,6 +128,7 @@ if args.Threshold != "":
 if args.whitelist != "":
     whitelist_path = Path(args.whitelist)
     lizard_args.append("-W" + surround_double_quotes(whitelist_path))
+
 if args.optional_args != "":
     lizard_args.append(args.optional_args)
 lizard_args.extend(lizard_paths)
@@ -150,6 +153,8 @@ print(result.stderr)
 with open(args.cli_output_file, mode="w") as f:
     f.write(result.stdout)
 
-print("::set-output name=result_output_path::" + str(args.cli_output_file))
+print("::set-output name=cli_output_path::" + str(args.cli_output_file))
+if output_file_flag:
+    print("::set-output name=result_output_path::" + str(output_file_path))
 
 sys.exit(result.returncode)
