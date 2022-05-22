@@ -1,6 +1,7 @@
 # Lizard Runner
 
 [![pyt](https://github.com/Uno-Takashi/lizard-runner/actions/workflows/pyt.yml/badge.svg?branch=main&event=push)](https://github.com/Uno-Takashi/lizard-runner/actions/workflows/pyt.yml)
+[![Lizard Runner](https://github.com/Uno-Takashi/lizard-runner/actions/workflows/lizard.yml/badge.svg?branch=main&event=push)](https://github.com/Uno-Takashi/lizard-runner/actions/workflows/lizard.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/Uno-Takashi/lizard-runner/blob/main/LICENSE)
 [![Python](https://img.shields.io/badge/Python-F9DC3E.svg?logo=python&style=flat)](https://www.python.org/)
 [![Docker](https://img.shields.io/badge/-Docker-EEE.svg?logo=docker&style=flat)](https://www.docker.com/)
@@ -93,6 +94,6 @@ The path to the file where the output result of cli is saved when lizard is run.
 
 ## 🛒 How to Get
 
-GitHub Marcket Place
+[Lizard Runner · Actions · GitHub Marketplace](https://github.com/marketplace/actions/lizard-runner)
 
 ## ⌨ Development
