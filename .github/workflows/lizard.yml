@@ -15,7 +15,7 @@ jobs:
         uses: ./ # Uses an action in the root directory
         id: lizard
         with:
-          path: "./src"
+          path: "./"
           language: "python cpp"
           whitelist: "white text.txt"
           cli_output_file: "cli output.txt"
