@@ -47,14 +47,14 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Lizard Runner
-        uses: Uno-Takashi/lizard-runner@v1
+        uses: Uno-Takashi/Lizard-Runner@v1
 ```
 
 lizard execution options can be passed as arguments. For example, the case for setting up CCN and execution paths is as follows.
 
 ```yml
       - name: Lizard Runner
-        uses: Uno-Takashi/lizard-runner@v1
+        uses: Uno-Takashi/Lizard-Runner@v1
         with:
           path: "./src ./libs"
           CCN: "20"
@@ -123,7 +123,7 @@ If the outputs is referenced in a later Action, it will look like this
 
 ```yml
       - name: Lizard Runner
-        uses: Uno-Takashi/lizard-runner@v1
+        uses: Uno-Takashi/Lizard-Runner@v1
         id: lizard
         with:
             input_file: "lizard_output.xml"
