@@ -22,6 +22,8 @@ As code becomes more complex, it becomes less maintainable.
 
 Often, code that was easy to modify in the early stages of a product's life can become so complex and huge before long that it becomes unmaintainable.
 
+By using the lizard-runner, engineers can keep track of the complexity of their code.
+
 ## 🛠️ Why We Built It
 
 In general, CI allows engineers to gain psychological security by keeping test code running. That is, they continue to be assured that the code they add will not have a fatal negative impact on the service.
@@ -67,16 +69,12 @@ Most of the input is the same as in the [lizard](http://www.lizard.ws/), but som
 ## 📤 Outputs
 
 The paths to the two files are output.
+The following outputs can be accessed via ${{ steps.<step-id>.outputs }} from this action
 
-### outputs.cli_output_path
-
-It will always exist.
-
-The path to the file where the output result of cli is saved when lizard is run. In the default setting, the output is saved in "lizard_cli_output.txt".
-
-### outputs.result_output_path
-
-Output only if "input_file" is given. lizard's output_file directory. ( e.g. "lizard_output.xml" )
+|       **Name**       |                                  **Description**                                 |
+|:--------------------:|:--------------------------------------------------------------------------------:|
+| `cli_output_path`    | The path to the file where the output result of cli is saved when lizard is run. |
+| `result_output_path` | Output only if "input_file" is given. lizard's output_file path.                 |
 
 ### See outputs
 
