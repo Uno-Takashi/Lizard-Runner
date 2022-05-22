@@ -119,6 +119,8 @@ The paths to the two files are output. The following outputs can be accessed via
 
 ### See outputs
 
+If the outputs is referenced in a later Action, it will look like this
+
 ```yml
       - name: Lizard Runner
         uses: Uno-Takashi/lizard-runner@v1
