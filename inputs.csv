@@ -1,25 +1,25 @@
 **Name**,**classification**,**Default**,**Description**
 ,,,
-path,Action Settings,"""./""",
-cli_output_file,Action Settings,"""lizard_cli_output.txt""",
-timeout,Action Settings,"""600""",
-optional_args,Action Settings,"""""",
-language,Wrapped Arguments,"""""",
-verbose,Original Arguments,"""false""",
-CCN,Original Arguments,"""15""",
-input_file,Original Arguments,"""""",
-output_file,Original Arguments,"""""",
-length,Original Arguments,"""1000""",
-arguments,Original Arguments,"""100""",
-warnings_only,Flag Arguments,"""false""",
-warning_msvs,Flag Arguments,"""false""",
-ignore_warnings,Original Arguments,"""0""",
-exclude,Wrapped Arguments,"""""",
-working_threads,Original Arguments,"""4""",
-xml,Flag Arguments,"""false""",
-html,Flag Arguments,"""false""",
-modified,Flag Arguments,"""false""",
-extension,Original Arguments,"""""",
-sort,Original Arguments,"""""",
-Threshold,Wrapped Arguments,"""nloc=1000000""",
-whitelist,Original Arguments,"""./whitelizard.txt""",
+`path`,Action Settings,"""./""","The path given to the command. The lizard is executed against this path. It is wrapped so that multiple path can be given at once by separating them with a space. Therefore, as a rule, paths containing spaces cannot be used."
+`cli_output_file`,Action Settings,"""lizard_cli_output.txt"""," Specify the name of the file in which to save the cli output results. If spaces are present, the file is treated as a file containing spaces."
+`timeout`,Action Settings,"""600""",The time until the lizard process timeout. Reduces the risk of consuming time without terminating when a command is invalid.
+`optional_args`,Action Settings,"""""",optional_args unconditionally appends the given string to the end of the command. But this option is not recommended. 
+`language`,Wrapped Arguments,"""""",The languages to be given are the same as for lizard. It is wrapped so that multiple languages can be given at once by separating them with a space.
+`verbose`,Flag Arguments,"""false""","If ""true"", the flag argument is specified in the lizard execution."
+`CCN`,Origin Arguments,"""15""",Same as [lizard](http://www.lizard.ws/).
+`input_file`,Origin Arguments,"""""","Same as [lizard](http://www.lizard.ws/). If spaces are present, the file is treated as a file containing spaces."
+`output_file`,Origin Arguments,"""""","Same as [lizard](http://www.lizard.ws/). If spaces are present, the file is treated as a file containing spaces."
+`length`,Origin Arguments,"""1000""",Same as [lizard](http://www.lizard.ws/).
+`arguments`,Origin Arguments,"""100""",Same as [lizard](http://www.lizard.ws/).
+`warnings_only`,Flag Arguments,"""false""","If ""true"", the flag argument is specified in the lizard execution."
+`warning_msvs`,Flag Arguments,"""false""","If ""true"", the flag argument is specified in the lizard execution."
+`ignore_warnings`,Origin Arguments,"""0""",Same as [lizard](http://www.lizard.ws/).
+`exclude`,Wrapped Arguments,"""""",The exclude to be given are the same as for lizard. It is wrapped so that multiple exclude can be given at once by separating them with a space.
+`working_threads`,Origin Arguments,"""4""",Same as [lizard](http://www.lizard.ws/).
+`xml`,Flag Arguments,"""false""","If ""true"", the flag argument is specified in the lizard execution."
+`html`,Flag Arguments,"""false""","If ""true"", the flag argument is specified in the lizard execution."
+`modified`,Flag Arguments,"""false""","If ""true"", the flag argument is specified in the lizard execution."
+`extension`,Origin Arguments,"""""",Same as [lizard](http://www.lizard.ws/).
+`sort`,Origin Arguments,"""""",Same as [lizard](http://www.lizard.ws/).
+`Threshold`,Wrapped Arguments,"""nloc=1000000""",The threshold to be given are the same as for lizard. It is wrapped so that multiple threshold can be given at once by separating them with a space.
+`whitelist`,Origin Arguments,"""./whitelizard.txt""","Same as [lizard](http://www.lizard.ws/). If spaces are present, the file is treated as a file containing spaces."

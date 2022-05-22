@@ -10,8 +10,8 @@ inputs:
     default: "./"
   cli_output_file:
     description: >
-      Flag to enable CI mode. in CI mode, 
-      the job will terminate with an error if a warning is acknowledged.
+      Specify the name of the file in which to save the cli output results.
+
     required: false
     default: "lizard_cli_output.txt"
   timeout:
