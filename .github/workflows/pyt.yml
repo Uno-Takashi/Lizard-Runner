@@ -28,7 +28,7 @@ jobs:
           pyt -o pyt.txt ./
       - name: Archive pyt log
         if: always()
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: pyt-report
           path: ./pyt.txt
