@@ -28,7 +28,7 @@ jobs:
       - name: Get cli_output_file
         run: echo -e "${{ steps.lizard.outputs.cli_output_path }}"
       - name: Archive lizard log
-        uses: actions/upload-artifact@4
+        uses: actions/upload-artifact@3
         with:
           name: "lizard_cli_output"
           path: "${{ steps.lizard.outputs.cli_output_path }}"
